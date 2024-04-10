@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Knewave&display=swap');
 
 * {
     margin         : 0;
@@ -7,4 +7,84 @@
     text-decoration: none;
     list-style     : none;
     border         : none;
+    font-family: "Knewave", sans-serif;
+}
+
+/*Custom properties*/
+
+:root {
+    --primary-color  : #DD6106;
+    --secondary-color: #1E1E1E;
+    --light-color    : #fff;
+    --dark-color     : #000;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+.home{
+    background: url(../img/bg.png) no-repeat center center/cover;
+}
+
+nav{
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.logo{
+    color: var(--light-color);
+}
+
+.logo-span{
+    color: var(--primary-color);
+}
+
+.menu-link{
+    margin-right: 2em;
+}
+
+.menu-item{
+    color: var(--light-color);
+    font-size: 1.2em;
+}
+
+.fa-bars{
+    color: var(--light-color);
+    font-size: 2em;
+    display: none;
+}
+
+.content-info{
+    width: 100vw;
+    height: 60vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-info-subtitle{
+    font-size: clamp(1em, 5vw, 2em);
+}
+
+.content-info-title{
+    font-size: clamp(2em, 10vw, 5em);
+    margin-bottom: .5em;
+}
+
+.btn{
+    font-size: 1.2em;
+    padding: .3em 2.5em;
+    border-radius: 50px;
+    background: var(--primary-color);
+    cursor: pointer;
 }
