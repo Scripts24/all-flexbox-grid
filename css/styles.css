@@ -63,11 +63,18 @@ nav {
     font-size: 1.2em;
 }
 
+.menu-item:hover,
+.fa-bars:hover {
+    color : var(--primary-color);
+    cursor: pointer;
+}
+
 .fa-bars {
     color    : var(--light-color);
-    font-size: 2em;
+    font-size: 1.5em;
     display  : none;
 }
+
 
 /**INICIO*/
 
@@ -84,7 +91,7 @@ nav {
 
 .content-info-title {
     font-size    : clamp(2em, 10vw, 5em);
-    font-weight: lighter;
+    font-weight  : lighter;
     margin-bottom: .5em;
 }
 
@@ -111,9 +118,14 @@ nav {
     padding-bottom  : 5em;
 }
 
-.events .content-info-title{
-    color: var(--light-color);
+.events .content-info-title {
+    color      : var(--light-color);
     font-weight: lighter;
+}
+
+.events .btn {
+    background-color: var(--dark-color);
+    color           : var(--light-color);
 }
 
 .events-info {
@@ -121,7 +133,7 @@ nav {
 }
 
 .events-title {
-    font-size: clamp(2em, 5vw, 3em);
+    font-size  : clamp(2em, 5vw, 3em);
     font-weight: lighter;
 }
 
@@ -182,4 +194,50 @@ nav {
     background-color: var(--secondary-color);
     text-align      : center;
     padding         : .5em 0;
+}
+
+/**FOOTER*/
+
+footer {
+    width           : 100%;
+    background-color: var(--primary-color);
+    text-align      : center;
+    padding         : 2em 0;
+}
+
+footer .info p {
+    font-family: 'Khula', sans-serif;
+    font-weight: bold;
+}
+
+footer .info a {
+    color: var(--dark-color);
+}
+
+
+/**MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        width           : 100vw;
+        height          : 100vh;
+        position        : absolute;
+        top             : 0;
+        left            : 0;
+        padding         : 2em 0;
+        text-align      : center;
+        background-color: var(--dark-color);
+        display         : none;
+    }
+
+    .menu li {
+        padding: 2em;
+    }
+
+    .fa-bars,
+    .show-menu {
+        display: block;
+        z-index: 1;
+    }
 }
