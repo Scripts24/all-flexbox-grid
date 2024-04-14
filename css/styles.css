@@ -7,11 +7,12 @@
     text-decoration: none;
     list-style     : none;
     border         : none;
-    font-family    : "Knewave", sans-serif;
+    outline        : none;
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x : hidden;
+    font-family: "Knewave", sans-serif;
 }
 
 /*Custom properties*/
@@ -19,6 +20,7 @@ body {
 :root {
     --primary-color  : #DD6106;
     --secondary-color: #1E1E1E;
+    --variant-color  : #f3d007;
     --light-color    : #fff;
     --dark-color     : #000;
 }
@@ -196,6 +198,137 @@ nav {
     padding         : .5em 0;
 }
 
+/**CONTACTO*/
+
+.header-contact nav {
+    padding         : .5em 2em;
+    background-color: var(--secondary-color);
+}
+
+
+.contact {
+    background    : var(--secondary-color) url(../img/bg3.png) no-repeat center center/cover;
+    min-height    : 100vh;
+    position      : relative;
+    padding       : 3em 6em;
+    color         : var(--light-color);
+    align-items   : center;
+    flex-direction: column;
+    font-family   : 'Khula', sans-serif;
+}
+
+.contact .content {
+    max-width : 800px;
+    text-align: center;
+}
+
+.contact .content h1 {
+    font-family  : "Knewave", sans-serif;
+    font-size    : clamp(2em, 10vw, 3em);
+    margin-bottom: .6em;
+}
+
+.contact .container {
+    width      : 100%;
+    margin-top : 2em;
+    align-items: center;
+}
+
+.contact .container .contact-info {
+    width         : 50%;
+    flex-direction: column;
+}
+
+.contact .container .contact-info .box {
+    position: relative;
+    padding : 1.5em 0;
+}
+
+.contact .container .contact-info .box .icon {
+    min-width       : 3em;
+    height          : 3em;
+    color           : var(--dark-color);
+    background-color: var(--light-color);
+    align-items     : center;
+    border-radius   : 50%;
+}
+
+.contact .container .contact-info .box .text {
+    margin-left   : 1em;
+    font-size     : 1em;
+    font-weight   : bold;
+    flex-direction: column;
+}
+
+.contact .container .contact-info .box .text h3 {
+    font-size: 1.5em;
+    color    : var(--variant-color);
+}
+
+.contact-form {
+    width     : 40%;
+    padding   : 2em;
+    background: var(--light-color);
+}
+
+.contact-form h2 {
+    font-size  : clamp(1.5em, 2vw, 3em);
+    color      : var(--secondary-color);
+    font-weight: bold;
+    text-align : center;
+}
+
+.contact-form .input-box {
+    position  : relative;
+    width     : 100%;
+    margin-top: 1em;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    width        : 100%;
+    padding      : .2em 0;
+    font-size    : 1em;
+    margin       : .5em 0;
+    border       : none;
+    border-bottom: 2px solid var(--secondary-color);
+    resize       : none;
+}
+
+.contact-form .input-box span {
+    position      : absolute;
+    left          : 0;
+    padding       : .2em 0;
+    font-size     : 1em;
+    margin        : .5em 0;
+    pointer-events: none;
+    transition    : .5s;
+    color         : var(--secondary-color);
+}
+
+.contact-form .input-box input:focus~span,
+.contact-form .input-box textarea:focus~span,
+.contact-form .input-box input:valid~span,
+.contact-form .input-box textarea:valid~span {
+    color    : var(--primary-color);
+    font-size: .75em;
+    transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+    width      : 50%;
+    background : var(--primary-color);
+    color      : var(--light-color);
+    font-weight: bold;
+    cursor     : pointer;
+    border     : none;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+    background: var(--variant-color);
+}
+
+
 /**FOOTER*/
 
 footer {
@@ -216,6 +349,27 @@ footer .info a {
 
 
 /**MEDIA QUERIES*/
+
+@media screen and (max-width: 991px) {
+
+    .contact {
+        padding: 2.2em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .contact .container .contact-info {
+        margin-bottom: 2.2em;
+        width        : 100%;
+    }
+
+    .container .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
