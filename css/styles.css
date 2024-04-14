@@ -205,12 +205,11 @@ nav {
     background-color: var(--secondary-color);
 }
 
-
 .contact {
     background    : var(--secondary-color) url(../img/bg3.png) no-repeat center center/cover;
     min-height    : 100vh;
     position      : relative;
-    padding       : 3em 6em;
+    padding       : 1em 6em;
     color         : var(--light-color);
     align-items   : center;
     flex-direction: column;
@@ -343,10 +342,69 @@ footer .info p {
     font-weight: bold;
 }
 
-footer .info a {
-    color: var(--dark-color);
+footer .info ul {
+    position : relative;
+    display  : flex;
+    margin   : 1em;
+    color    : var(--secondary-color);
+    font-size: 1.2em;
 }
 
+footer .info ul li {
+    position: relative;
+    margin  : 0 1em;
+    cursor  : pointer;
+}
+
+footer .info ul li a i {
+    font-size: 1.4em;
+    color    : var(--secondary-color);
+}
+
+footer .info ul li::before {
+    font-family: fontAwesome;
+    font-size  : 1.4em;
+    position   : absolute;
+    height     : 0;
+    top        : 0;
+    left       : 0;
+    overflow   : hidden;
+    transition : .5s ease-in-out;
+}
+
+footer .info ul li:nth-child(1):before {
+    content      : "\f09a";
+    color        : #0000ff;
+    border-bottom: 4px solid #0000ff;
+}
+
+footer .info ul li:nth-child(2):before {
+    content      : "\f099";
+    color        : #1da1f2;
+    border-bottom: 4px solid #1da1f2;
+}
+
+footer .info ul li:nth-child(3):before {
+    content      : "\f16d";
+    color        : #310426;
+    border-bottom: 4px solid #310426;
+}
+
+footer .info ul li:nth-child(4):before {
+    content      : "\f232";
+    color        : #1af506;
+    border-bottom: 4px solid #1af506;
+}
+
+footer .info ul li:nth-child(5):before {
+    content      : "\f0e0";
+    color        : #f71b26;
+    border-bottom: 4px solid #f71b26;
+}
+
+footer .info ul li:hover::before {
+    height: 100%;
+}
 
 /**MEDIA QUERIES*/
 
