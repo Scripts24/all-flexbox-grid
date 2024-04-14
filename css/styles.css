@@ -198,6 +198,48 @@ nav {
     padding         : .5em 0;
 }
 
+/**CONÓCENOS*/
+
+.about {
+    background: var(--secondary-color);
+    min-height: 100vh;
+    padding   : 2rem 7%;
+}
+
+.about h1 {
+    text-align   : center;
+    color        : var(--light-color);
+    font-size    : clamp(2em, 10vw, 3em);
+    font-weight  : lighter;
+    margin-bottom: 1em;
+}
+
+.about .row {
+    display    : flex;
+    align-items: center;
+    background : var(--primary-color);
+}
+
+.about .row .image {
+    flex   : 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex       : 1 1 45rem;
+    padding    : 2rem;
+    font-family: "Khula", sans-serif;
+}
+
+.about .row .content h3 {
+    font-size : 1.6rem;
+    text-align: center;
+}
+
 /**CONTACTO*/
 
 .header-contact nav {
@@ -327,7 +369,6 @@ nav {
     background: var(--variant-color);
 }
 
-
 /**FOOTER*/
 
 footer {
@@ -406,7 +447,15 @@ footer .info ul li:hover::before {
     height: 100%;
 }
 
+
 /**MEDIA QUERIES*/
+
+@media screen and (max-width: 1200px) {
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+}
 
 @media screen and (max-width: 991px) {
 
